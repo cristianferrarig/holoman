@@ -1,0 +1,23 @@
+<div class="docs-page">
+
+  <aside class="docs-aside">
+    <header class="docs-header">
+      <h1 class="docs-title">PREY</h1>
+      <p class="docs-tagline">Style guide</small>
+    </header>
+
+    <nav class="docs-nav">
+      <ul class="docs-menu">
+      <% @categories.each do |category, file_name| %>
+        <li><a class="docs-link" href="<%= file_name %>"><%= category %></a></li>
+      <% end %>
+      </ul>
+    </nav>
+  </aside>
+
+  <section class="docs-body content">
+    <ul class="docs-menu">
+    <% @blocks.each do |b| %>
+      <li><a class="docs-link" href="#<%= b[:name] %>"><%= b[:title] %></a></li>
+    <% end %>
+    </ul>
