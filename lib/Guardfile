@@ -1,0 +1,5 @@
+guard :shell do
+  watch(%r{^source/assets/.+\.*})  { `bundle exec holoman generate` }
+  watch(%r{^docs_temp/.+\.*})      { `bundle exec holoman migrate`  }
+  watch('config.rb')               { `bundle exec holoman restart`  }
+end

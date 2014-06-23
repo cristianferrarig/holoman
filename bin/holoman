@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'holoman'
+::Holoman::CLI.start
